@@ -530,156 +530,95 @@ body {
   color: #fff;
 }
 /* Responsive Styles */
-
-/* Small devices (phones) */
-@media (max-width: 576px) {
-  /* Update font sizes */
-  .hero-content h1 {
-    font-size: 32px;
+/* Adjust header styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
   }
 
-  .hero-content p {
-    font-size: 18px;
-  }
-
-  .about-content h1 {
-    font-size: 24px;
-  }
-
-  .about-content p {
-    font-size: 16px;
-  }
-
-  .education-item h4 {
+  .logo {
     font-size: 20px;
   }
 
-  .education-item p {
-    font-size: 14px;
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .section-portfolio h1 {
-    font-size: 24px;
+  .nav ul li {
+    margin: 10px 0;
   }
 
-  .service .section-title h1 {
-    font-size: 24px;
-  }
-
-  .contact .section-title h1 {
-    font-size: 24px;
-  }
-
-  /* Adjust portfolio grid */
-  .portfolio-images {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* Make the scroll-to-top button visible */
-  .scroll-to-top {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-/* Medium devices (tablets) */
-@media (min-width: 577px) and (max-width: 991px) {
-  /* Update font sizes */
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-  .hero-content p {
-    font-size: 20px;
-  }
-
-  .about-content h1 {
-    font-size: 30px;
-  }
-
-  .about-content p {
-    font-size: 18px;
-  }
-
-  .education-item h4 {
-    font-size: 22px;
-  }
-
-  .education-item p {
+  .nav ul li a {
     font-size: 16px;
   }
 
-  .section-portfolio h1 {
-    font-size: 30px;
+  /* Show the navigation links when the navigation menu is active */
+  .nav.active ul {
+    display: flex;
   }
 
-  .service .section-title h1 {
-    font-size: 30px;
-  }
-
-  .contact .section-title h1 {
-    font-size: 30px;
-  }
-
-  /* Adjust portfolio grid */
-  .portfolio-images {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* Make the scroll-to-top button visible */
-  .scroll-to-top {
-    opacity: 1;
-    visibility: visible;
+  .contact {
+    display: none;
   }
 }
 
-/* Large devices (desktops) */
-@media (min-width: 992px) {
-  /* Update font sizes */
+/* Adjust hero styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 200px 0;
+  }
+
   .hero-content h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .hero-content p {
-    font-size: 24px;
-  }
-
-  .about-content h1 {
-    font-size: 36px;
-  }
-
-  .about-content p {
     font-size: 18px;
   }
+}
 
-  .education-item h4 {
-    font-size: 24px;
+/* Adjust about section styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .about-content .skills-list {
+    flex-direction: column;
   }
 
-  .education-item p {
-    font-size: 18px;
+  .about-content .skill-item {
+    width: 100%;
   }
+}
 
-  .section-portfolio h1 {
-    font-size: 36px;
-  }
-
-  .service .section-title h1 {
-    font-size: 36px;
-  }
-
-  .contact .section-title h1 {
-    font-size: 36px;
-  }
-
-  /* Reset portfolio grid */
+/* Adjust portfolio section styles for smaller screens */
+@media screen and (max-width: 768px) {
   .portfolio-images {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+}
+
+/* Adjust services section styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .service .row {
+    flex-direction: column;
   }
 
-  /* Hide the scroll-to-top button on large devices */
-  .scroll-to-top {
-    opacity: 0;
-    visibility: hidden;
+  .left,
+  .right {
+    flex-basis: 100%;
+  }
+}
+
+/* Adjust contact section styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-item {
+    flex-basis: 100%;
+    margin-bottom: 20px;
   }
 }
